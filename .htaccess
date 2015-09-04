@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} !^cdonnelly\.uk [NC]
+    RewriteCond %{HTTP_HOST} !^localhost [NC]
+    RewriteCond %{HTTP_HOST} !^$
+    RewriteRule ^(.*)$ http://cdonnelly.uk/$1 [R=301,L]
+</IfModule>
